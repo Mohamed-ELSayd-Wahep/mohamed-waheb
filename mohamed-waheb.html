@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>محمد وهيب | مطور واجهات أمامية ومصمم مواقع وتطبيقات ويب (Frontend & UI/UX Developer)</title>
+  
+  <!-- تعريف الميتا لمحركات البحث والشبكات الاجتماعية (SEO Meta Tags) -->
+  <meta name="description" content="معرض أعمال وموقع شخصي لمحمد وهيب، مطور واجهات أمامية ومصمم تجارب مستخدم حر. متخصص في بناء مواقع شركات ومتاجر إلكترونية وحلول ويب سريعة وعصرية.">
+  <meta name="keywords" content="محمد وهيب, Mohamed Waheb, مطور واجهات أمامية, مصمم مواقع, برمجة ويب, Tailwind CSS, JavaScript, مطور فرونت إند, Freelance Web Developer, معارض أعمال">
+  <meta name="author" content="محمد وهيب">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#bae6fd',
+              300: '#7dd3fc',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+              800: '#075985',
+              900: '#0c4a6e',
+            },
+            darkBg: '#0b0f19',
+            darkCard: '#131b2e',
+            darkBorder: '#1e293b'
+          },
+          fontFamily: {
+            heading: ['Cairo', 'sans-serif'],
+            body: ['Tajawal', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts: Cairo & Tajawal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- ملف التنسيقات المخصص -->
+  <style>
+/* ==========================================================================
+   ملف التنسيقات الإضافية والمخصصة (Custom Styles & Animations)
+   لـ موقع معرض الأعمال الشخصي (Portfolio) - محمد وهيب
+   ========================================================================== */
+
+/* استيراد الخطوط العربية الفاخرة من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800&display=swap');
+
+:root {
+  --font-heading: 'Cairo', system-ui, -apple-system, sans-serif;
+  --font-body: 'Tajawal', system-ui, -apple-system, sans-serif;
+  
+  /* ألوان النيون والتوهج */
+  --primary-glow: rgba(59, 130, 246, 0.5);
+  --accent-glow: rgba(14, 165, 233, 0.4);
+  --emerald-glow: rgba(16, 185, 129, 0.4);
+}
+
+/* التمرير السلس وتنسيق الخطوط */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+}
+
+body {
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  direction: rtl;
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: var(--font-heading);
+}
+
+/* شريط التمرير المخصص (Custom Scrollbar) */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 6px;
+  border: 2px solid #0f172a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
+
+/* تأثيرات الزجاج الشفاف الفاخر (Glassmorphism) */
+.glass-nav {
+  background: rgba(15, 23, 42, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.light .glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.glass-card {
+  background: rgba(30, 41, 59, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light .glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 20px 35px -12px rgba(59, 130, 246, 0.2);
+}
+
+/* تأثير التوهج المخصص (Glow Effects) */
+.glow-primary {
+  box-shadow: 0 0 25px var(--primary-glow);
+}
+
+.glow-accent {
+  box-shadow: 0 0 25px var(--accent-glow);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #60a5fa 0%, #38bdf8 50%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-purple {
+  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* خطوط خلفية شبكية ديناميكية (Grid Background) */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+.light .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+/* حركة عائمة (Float Animation) */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
+
+.animate-float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 7s ease-in-out 2s infinite;
+}
+
+/* تأثير النبض الخافت للأضواء الخلفية */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.08);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+/* أنيميشن ظهور بطاقات المشاريع عند التصفية */
+@keyframes projectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.project-item {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-item.fade-in {
+  animation: projectFadeIn 0.45s ease-out forwards;
+}
+
+.project-item.hide {
+  display: none;
+}
+
+/* تصميم حالة النشاط في شريط التنقل والأزرار */
+.nav-link.active {
+  color: #38bdf8 !important;
+  position: relative;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  right: 50%;
+  transform: translateX(50%);
+  width: 18px;
+  height: 2.5px;
+  background: #38bdf8;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+/* تنسيق المودال (نافذة التفاصيل المنبثقة) */
+.modal-backdrop {
+  background: rgba(10, 15, 29, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+/* إشعار التوست (Toast Notification) */
+#toastNotification {
+  transform: translateY(120%);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#toastNotification.show {
+  transform: translateY(0);
+}
+
+</style>
+</head>
+
+<body class="bg-[#0b0f19] text-slate-200 antialiased selection:bg-sky-500 selection:text-white transition-colors duration-300">
+
+  <!-- ==========================================================================
+       1. الشريط العلوي والتنقل (Sticky Navbar)
+       ========================================================================== -->
+  <header id="mainNav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-nav">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- الشعار الشخصي -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-sky-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-sky-500/25 group-hover:scale-105 transition-transform">
+            <span class="font-mono">&lt;/&gt;</span>
+          </div>
+          <div>
+            <span class="font-heading font-extrabold text-xl tracking-tight text-white block">محمد وهيب</span>
+            <span class="text-xs text-sky-400 font-medium">مطور واجهات وتجارب رقمية</span>
+          </div>
+        </a>
+
+        <!-- روابط القائمة لشاشات الكمبيوتر -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a href="#hero" class="nav-link active hover:text-sky-400 transition-colors py-1">الرئيسية</a>
+          <a href="#about" class="nav-link hover:text-sky-400 transition-colors py-1">من أنا</a>
+          <a href="#services" class="nav-link hover:text-sky-400 transition-colors py-1">خدماتي</a>
+          <a href="#portfolio" class="nav-link hover:text-sky-400 transition-colors py-1">معرض الأعمال</a>
+          <a href="#skills" class="nav-link hover:text-sky-400 transition-colors py-1">مهاراتي</a>
+          <a href="#testimonials" class="nav-link hover:text-sky-400 transition-colors py-1">آراء العملاء</a>
+          <a href="#contact" class="nav-link hover:text-sky-400 transition-colors py-1">تواصل معي</a>
+        </nav>
+
+        <!-- أزرار الإجراء السريع وزر النمط -->
+        <div class="hidden sm:flex items-center gap-4">
+          <!-- زر التبديل بين الوضع الليلي والنهاري -->
+          <button id="themeToggle" type="button" aria-label="تبديل الوضع" class="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center hover:bg-slate-700 text-slate-300 transition-all">
+            <i id="themeIcon" class="fas fa-sun text-amber-400 text-lg"></i>
+          </button>
+
+          <!-- زر تحميل السيرة الذاتية أو التواصل -->
+          <a href="#contact" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold text-sm shadow-lg shadow-sky-500/25 hover:shadow-sky-500/40 hover:-translate-y-0.5 transition-all">
+            <span>ابدأ مشروعك الآن</span>
+            <i class="fas fa-arrow-left text-xs"></i>
+          </a>
+        </div>
+
+        <!-- زر القائمة للهواتف (Hamburger) -->
+        <div class="flex items-center gap-2 lg:hidden">
+          <button id="mobileMenuBtn" aria-label="فتح القائمة" class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700 text-slate-200 hover:text-white">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- القائمة المنسدلة للهواتف الذكية (Mobile Menu Drawer) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-slate-900/95 border-b border-slate-800 px-4 pt-3 pb-6 space-y-3 backdrop-blur-xl">
+      <a href="#hero" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">الرئيسية</a>
+      <a href="#about" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">من أنا</a>
+      <a href="#services" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">خدماتي</a>
+      <a href="#portfolio" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">معرض الأعمال</a>
+      <a href="#skills" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">مهاراتي</a>
+      <a href="#testimonials" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">آراء العملاء</a>
+      <a href="#contact" class="mobile-nav-link block px-3 py-2 rounded-lg text-base font-medium text-slate-200 hover:bg-slate-800 hover:text-sky-400">تواصل معي</a>
+      <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+        <a href="#contact" class="w-full text-center py-2.5 rounded-xl bg-sky-500 text-white font-semibold text-sm">تواصل معي الآن</a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================================================
+       2. القسم الترحيبي (Hero Section)
+       ========================================================================== -->
+  <section id="hero" class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden bg-grid-pattern">
+    <!-- توهجات ضوئية خلفية ناعمة -->
+    <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-sky-500/15 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+    <div class="absolute bottom-10 left-10 w-80 h-80 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none animate-pulse-glow"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- العمود الأيمن: النص الترويجي والأزرار -->
+        <div class="lg:col-span-7 space-y-7 text-center lg:text-right">
+          
+          <!-- شارة التوفر للعمل الحر -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-slate-800/90 border border-slate-700/80 shadow-inner">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+            </span>
+            <span class="text-xs md:text-sm font-semibold text-slate-300">متاح لاستقبال مشاريع العمل الحر الجديدة</span>
+          </div>
+
+          <!-- العنوان الرئيسي -->
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-heading text-white leading-tight">
+            أبني مواقع وتطبيقات ويب 
+            <span class="text-gradient block mt-2">سريعة، جذابة، وتصنع الفارق</span>
+          </h1>
+
+          <!-- الوصف الترويجي القصير -->
+          <p class="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+            مرحباً! أنا <strong class="text-white">محمد وهيب</strong>، مطور واجهات أمامية (Frontend) ومصمم تجارب مستخدم (UI/UX). أساعد الشركات ورواد الأعمال في تحويل أفكارهم وتصاميمهم إلى واجهات تفاعلية عالية الأداء تزيد من مبيعاتهم وولاء عملائهم.
+          </p>
+
+          <!-- أزرار الدعوة إلى اتخاذ إجراء (CTAs) -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="#portfolio" class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 text-white font-bold text-base shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:-translate-y-1 transition-all">
+              <i class="fas fa-layer-group"></i>
+              <span>استعرض أعمالي</span>
+            </a>
+
+            <a href="#contact" class="inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-slate-200 hover:text-white font-semibold text-base transition-all">
+              <i class="fas fa-paper-plane text-sky-400"></i>
+              <span>تواصل معي</span>
+            </a>
+
+            <a href="#contact" download class="inline-flex items-center justify-center gap-2 px-5 py-4 rounded-xl text-slate-400 hover:text-sky-400 text-sm font-medium transition-colors">
+              <i class="fas fa-download"></i>
+              <span>تحميل السيرة الذاتية (CV)</span>
+            </a>
+          </div>
+
+          <!-- إحصائيات سريعة بالهيرو -->
+          <div class="pt-8 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center lg:text-right">
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold font-heading text-white counter-value" data-target="5" data-suffix="+">0</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1">سنوات خبرة في الويب</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold font-heading text-white counter-value" data-target="45" data-suffix="+">0</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1">مشروع تم إنجازه بنجاح</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold font-heading text-emerald-400 counter-value" data-target="100" data-suffix="%">0</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1">الالتزام بمواعيد التسليم</p>
+            </div>
+            <div>
+              <p class="text-2xl sm:text-3xl font-extrabold font-heading text-sky-400 counter-value" data-target="99" data-suffix="%">0</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1">تقييم رضا العملاء</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- العمود الأيسر: المجسم البصري وكود المعاينة التفاعلي -->
+        <div class="lg:col-span-5 relative flex items-center justify-center">
+          
+          <!-- بطاقة المحاكاة البرمجية الفاخرة (Code Mockup Card) -->
+          <div class="w-full max-w-md bg-slate-900/90 border border-slate-800 rounded-2xl shadow-2xl p-6 relative z-10 glass-card">
+            
+            <!-- أزرار نافذة نظام التشغيل -->
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-800 text-xs text-slate-400">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-emerald-500 inline-block"></span>
+              </div>
+              <span class="font-mono text-xs text-slate-400">MohamedWaheb.js</span>
+              <i class="fas fa-code text-slate-500"></i>
+            </div>
+
+            <!-- مقتطف كود تعريفي منمق باسم محمد وهيب -->
+            <pre class="font-mono text-xs sm:text-sm text-slate-300 overflow-x-auto leading-relaxed" dir="ltr"><code><span class="text-purple-400">const</span> <span class="text-sky-400">developer</span> = {
+  <span class="text-slate-400">name:</span> <span class="text-emerald-400">'Mohamed Waheb'</span>,
+  <span class="text-slate-400">role:</span> <span class="text-emerald-400">'Frontend & UI/UX Expert'</span>,
+  <span class="text-slate-400">coreStack:</span> [
+    <span class="text-amber-300">'HTML5 / CSS3'</span>,
+    <span class="text-sky-300">'Tailwind CSS'</span>,
+    <span class="text-yellow-300">'JavaScript (ES6+)'</span>,
+    <span class="text-indigo-300">'WordPress / Elementor'</span>
+  ],
+  <span class="text-slate-400">passion:</span> <span class="text-emerald-400">'Pixel-Perfect & Fast Web'</span>,
+  <span class="text-slate-400">availableForHire:</span> <span class="text-rose-400">true</span>,
+  <span class="text-purple-400">deliverValue:</span> () => {
+    <span class="text-purple-400">return</span> <span class="text-emerald-400">'حلول رقمية تزيد من أرباحك'</span>;
+  }
+};</code></pre>
+
+            <!-- بطاقة مهارة عائمة 1 -->
+            <div class="absolute -top-5 -left-5 bg-slate-800 border border-slate-700 px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-3 animate-float-slow">
+              <i class="fab fa-react text-sky-400 text-xl"></i>
+              <div>
+                <p class="text-xs font-bold text-white">واجهات تفاعلية</p>
+                <p class="text-[10px] text-slate-400">سرعة وأداء فائق</p>
+              </div>
+            </div>
+
+            <!-- بطاقة مهارة عائمة 2 -->
+            <div class="absolute -bottom-6 -right-4 bg-slate-800 border border-slate-700 px-4 py-2.5 rounded-xl shadow-xl flex items-center gap-3 animate-float-delayed">
+              <i class="fas fa-bolt text-amber-400 text-xl"></i>
+              <div>
+                <p class="text-xs font-bold text-white">Google Speed: 99+</p>
+                <p class="text-[10px] text-slate-400">توافق تام مع السيو</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       3. قسم من أنا (About Me Section)
+       ========================================================================== -->
+  <section id="about" class="py-24 bg-slate-900/50 relative border-t border-b border-slate-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- الصورة الرمزية ومربعات الثقة -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="relative rounded-3xl overflow-hidden border border-slate-700/80 shadow-2xl group">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="محمد وهيب مطور واجهات" class="w-full h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
+            
+            <div class="absolute bottom-6 right-6 left-6 text-right">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/20 text-sky-400 border border-sky-500/30">مطور مستقل معتمد</span>
+              <h3 class="text-2xl font-bold font-heading text-white mt-2">محمد وهيب</h3>
+              <p class="text-sm text-slate-300">مطور واجهات أمامية ومصمم تجارب ويب</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- النصوص والمعلومات التوضيحية -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold">
+            <i class="fas fa-user-check"></i>
+            <span>من أنا وخبرتي المهنية</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white leading-tight">
+            أجمع بين دقة التصميم المعماري وقوة الأداء البرمجي
+          </h2>
+
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            لأكثر من 5 سنوات، كرّست شغفي في مساعدة أصحاب الشركات الناشئة، المتاجر الإلكترونية، والمؤسسات على الظهور الرقمي المشرف. لا أكتفي بكتابة كود يعمل فقط؛ بل أحرص على أن يكون الموقع أداة بيع وتسويق فعالة تتميز بسرعة خارقة، تصميم متناسق على الهواتف، وسهولة تامة في التصفح.
+          </p>
+
+          <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+            أؤمن بأن سر نجاح أي موقع يكمن في ثلاثة أركان: كود نظيف وقابل للتطوير (Clean Code)، تجربة مستخدم تركز على التحويل (High Conversion UI/UX)، وتوافق كامل مع محركات البحث ومعايير السيو (Technical SEO).
+          </p>
+
+          <!-- ركائز ومميزات العمل معي -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+            <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center shrink-0">
+                <i class="fas fa-tachometer-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm font-heading">سرعة تحميل فائقة</h4>
+                <p class="text-xs text-slate-400 mt-1">كود خفيف وصور محسنة لتحقيق تقييم أخضر على Google PageSpeed.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm font-heading">متجاوب 100% (Mobile First)</h4>
+                <p class="text-xs text-slate-400 mt-1">عرض استثنائي على مختلف أحجام الشاشات من الهواتف إلى الشاشات العريضة.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center shrink-0">
+                <i class="fas fa-code"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm font-heading">كود نظيف ومعياري</h4>
+                <p class="text-xs text-slate-400 mt-1">بنية برمجية معلقة ومنظمة يسهل على أي فريق إكمالها والتعديل عليها.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm font-heading">دعم فني وتواصل مستمر</h4>
+                <p class="text-xs text-slate-400 mt-1">متابعة دقيقة لمراحل العمل ودعم فني وضمان مجاني بعد تسليم المشروع.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       4. قسم الخدمات المقدمة (Services Section)
+       ========================================================================== -->
+  <section id="services" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- عنوان القسم -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold">
+          <i class="fas fa-cogs"></i>
+          <span>خدماتي الاحترافية</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          حلول رقمية متكاملة مصممة لنمو أعمالك
+        </h2>
+        <p class="text-slate-400 text-base">
+          أقدم مجموعة متكاملة من خدمات تطوير وتصميم الويب التي تغطي احتياجاتك من الصفر وحتى الإطلاق الناجح.
+        </p>
+      </div>
+
+      <!-- شبكة بطاقات الخدمات (4 خدمات أساسية) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- خدمة 1: مواقع الشركات -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-2xl group-hover:bg-sky-500 group-hover:text-white transition-all">
+              <i class="fas fa-building"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white">مواقع الشركات والمؤسسات</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              تصميم وتطوير مواقع تعريفية راقية تعكس هوية شركتك، تبرز خدماتك، وتبني الثقة مع عملائك ومستثمريك.
+            </p>
+            <ul class="space-y-2 pt-2 border-t border-slate-800 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> تصميم مخصص من الصفر (Pixel-Perfect)</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> تهيئة محركات البحث (On-Page SEO)</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> لوحة تحكم سهلة لإدارة المحتوى</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-sky-400 hover:text-sky-300 transition-colors">
+              <span>طلب هذه الخدمة</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- خدمة 2: المتاجر الإلكترونية -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-all">
+              <i class="fas fa-shopping-bag"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white">المتاجر الإلكترونية المتكاملة</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              بناء منصات تجارة إلكترونية سلسة تركز على تجربة شراء سريعة تضاعف معدل التحويل وتقلل من السلات المتروكة.
+            </p>
+            <ul class="space-y-2 pt-2 border-t border-slate-800 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> ربط بوابات الدفع (مدى، فيزا، آبل باي)</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> سلة شراء عائمة وسريعة</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> تتبع الشحنات وإدارة المخزون</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors">
+              <span>طلب هذه الخدمة</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- خدمة 3: حاسبات وأدوات تفاعلية -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-2xl group-hover:bg-purple-500 group-hover:text-white transition-all">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white">أدوات وحاسبات تكلفة تفاعلية</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              برمجة تطبيقات ويب تفاعلية وأدوات حسابية ذكية تساعد عملاءك على احتساب التكاليف والحصول على عروض أسعار فورية.
+            </p>
+            <ul class="space-y-2 pt-2 border-t border-slate-800 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> حسابات ديناميكية فورية بجافاسكريبت</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> توليد ملفات وتصدير تقارير PDF</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> لوحات تحكم ومخططات بيانية تفاعلية</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-purple-400 hover:text-purple-300 transition-colors">
+              <span>طلب هذه الخدمة</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- خدمة 4: صيانة وتسريع المواقع -->
+        <div class="glass-card rounded-2xl p-7 flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-14 h-14 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-2xl group-hover:bg-amber-500 group-hover:text-white transition-all">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3 class="text-xl font-bold font-heading text-white">تسريع وتطوير وصيانة المواقع</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              فحص وتحسين أداء المواقع البطيئة، حل المشاكل البرمجية، وتحديث التقنيات لضمان عمل الموقع بأعلى كفاءة وأمان.
+            </p>
+            <ul class="space-y-2 pt-2 border-t border-slate-800 text-xs text-slate-300">
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> ضغط الملفات وتحسين صور WebP</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> إصلاح أخطاء الاستجابة والتخطيط</li>
+              <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> حماية وتأمين ضد الثغرات وتحديثات دورية</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="#contact" class="inline-flex items-center gap-2 text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors">
+              <span>طلب هذه الخدمة</span>
+              <i class="fas fa-arrow-left"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       5. قسم معرض الأعمال (Portfolio / Projects Section - القسم الأهم)
+       ========================================================================== -->
+  <section id="portfolio" class="py-24 bg-slate-900/50 border-t border-b border-slate-800/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- عنوان القسم ومقدمته -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold">
+          <i class="fas fa-briefcase"></i>
+          <span>سابقة الأعمال المنجزة</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          مشاريع حقيقية حققت نتائج استثنائية
+        </h2>
+        <p class="text-slate-400 text-base">
+          تصفح نماذج من أحدث المواقع والتطبيقات التي قام بتصميمها وبرمجتها محمد وهيب لعملائه في مختلف القطاعات.
+        </p>
+      </div>
+
+      <!-- أزرار تصفية وتصنيف المشاريع (Filter Tabs) -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-14">
+        <button type="button" data-filter="all" class="filter-btn active px-6 py-2.5 rounded-xl text-sm font-semibold transition-all bg-sky-500 text-white shadow-md shadow-sky-500/25">
+          جميع المشاريع
+        </button>
+        <button type="button" data-filter="ecommerce" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:bg-slate-700">
+          متاجر إلكترونية
+        </button>
+        <button type="button" data-filter="corporate" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:bg-slate-700">
+          مواقع شركات ومؤسسات
+        </button>
+        <button type="button" data-filter="webapp" class="filter-btn px-6 py-2.5 rounded-xl text-sm font-semibold transition-all bg-slate-800/80 text-slate-300 hover:bg-slate-700">
+          تطبيقات وأدوات تفاعلية
+        </button>
+      </div>
+
+      <!-- شبكة بطاقات المشاريع (Projects Grid) -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        
+        <!-- مشروع 1: Tito's Decoration -->
+        <div class="project-item rounded-2xl overflow-hidden glass-card flex flex-col justify-between" data-category="corporate">
+          <div>
+            <div class="relative overflow-hidden group h-64 bg-slate-800">
+              <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Tito's Decoration UK" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+              <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-amber-500/90 text-slate-950 shadow-md">تشطيبات وديكور فاخر (UK)</span>
+              <span class="absolute bottom-3 left-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/80 text-[11px] font-semibold text-emerald-400 border border-emerald-500/30">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>منشور حياً على Vercel</span>
+              </span>
+            </div>
+            
+            <div class="p-6 space-y-3">
+              <h3 class="text-xl font-bold font-heading text-white">شركة "Tito's Decoration" للتشطيبات والديكور</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                موقع تعريفي بريطاني فاخر لشركة تشطيبات وديكور داخلي بلندن، يبرز المعارض البانورامية وخدمات الدهانات والباركيه مع طلب عروض أسعار تفاعلي.
+              </p>
+              
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-sky-400 border border-slate-700">HTML5</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-amber-400 border border-slate-700">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-purple-400 border border-slate-700">Cinzel & Poppins</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-emerald-400 border border-slate-700">Fit-Out UI</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 flex items-center justify-between gap-2 border-t border-slate-800/80 mt-4">
+            <button type="button" data-project-id="project-1" class="view-details-btn inline-flex items-center gap-1.5 text-xs font-bold text-slate-300 hover:text-sky-400 transition-colors">
+              <i class="fas fa-info-circle"></i>
+              <span>تفاصيل</span>
+            </button>
+            <div class="flex items-center gap-2">
+              <a href="../titos-calculator/" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 text-xs font-bold transition-all" title="فتح آلة حساب تكاليف الديكور">
+                <i class="fas fa-calculator text-[11px]"></i>
+                <span>آلة الحساب</span>
+              </a>
+              <a href="https://titos-bay.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-bold transition-all shadow-lg shadow-sky-500/20">
+                <span>الموقع الحي</span>
+                <i class="fas fa-external-link-alt text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- مشروع 2: Nile Smile Dental Clinic -->
+        <div class="project-item rounded-2xl overflow-hidden glass-card flex flex-col justify-between" data-category="corporate webapp">
+          <div>
+            <div class="relative overflow-hidden group h-64 bg-slate-800">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="ابتسامة النيل لطب الأسنان" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+              <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-sky-500 text-white shadow-md">مركز طبي ونظام حجز</span>
+              <span class="absolute bottom-3 left-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/80 text-[11px] font-semibold text-emerald-400 border border-emerald-500/30">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>منشور حياً على Vercel</span>
+              </span>
+            </div>
+            
+            <div class="p-6 space-y-3">
+              <h3 class="text-xl font-bold font-heading text-white">مركز "ابتسامة النيل" لطب الأسنان</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                بوابة طبية متكاملة لعيادة أسنان تتيح للمرضى حجز المواعيد، مقارنة صور قبل وبعد العلاج بالسحب، واستلام إيصال رقمي مؤكد وتأكيد واتساب.
+              </p>
+              
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-sky-400 border border-slate-700">HTML5 / RTL</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-emerald-400 border border-slate-700">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-indigo-400 border border-slate-700">Before/After Slider</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-sky-400 border border-slate-700">Booking System</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 flex items-center justify-between gap-3 border-t border-slate-800/80 mt-4">
+            <button type="button" data-project-id="project-2" class="view-details-btn inline-flex items-center gap-1.5 text-xs font-bold text-slate-300 hover:text-sky-400 transition-colors">
+              <i class="fas fa-info-circle"></i>
+              <span>تفاصيل المشروع</span>
+            </button>
+            <a href="https://my-ten-ashy.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white text-xs font-bold transition-all shadow-lg shadow-emerald-500/20">
+              <span>زيارة الموقع الحي</span>
+              <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- مشروع 3: TechHub Store -->
+        <div class="project-item rounded-2xl overflow-hidden glass-card flex flex-col justify-between" data-category="ecommerce">
+          <div>
+            <div class="relative overflow-hidden group h-64 bg-slate-800">
+              <img src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=800&q=80" alt="TechHub Store" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+              <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-indigo-500 text-white shadow-md">متجر إلكتروني ذكي</span>
+              <span class="absolute bottom-3 left-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/80 text-[11px] font-semibold text-emerald-400 border border-emerald-500/30">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>منشور حياً على Vercel</span>
+              </span>
+            </div>
+            
+            <div class="p-6 space-y-3">
+              <h3 class="text-xl font-bold font-heading text-white">متجر "تيك هاب" (TechHub) للإلكترونيات</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                متجر إلكتروني عصري وفائق السرعة للإلكترونيات الذكية والساعات والسماعات وإكسسوارات العمل، مزود بسلة تسوق متطورة ونظام عروض تفاعلي.
+              </p>
+              
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-indigo-400 border border-slate-700">Stitch UI</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-sky-400 border border-slate-700">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-yellow-400 border border-slate-700">Interactive Cart</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-emerald-400 border border-slate-700">Fast Checkout</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 flex items-center justify-between gap-3 border-t border-slate-800/80 mt-4">
+            <button type="button" data-project-id="project-3" class="view-details-btn inline-flex items-center gap-1.5 text-xs font-bold text-slate-300 hover:text-sky-400 transition-colors">
+              <i class="fas fa-info-circle"></i>
+              <span>تفاصيل المشروع</span>
+            </button>
+            <a href="https://techhub-umber.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-indigo-500 hover:bg-indigo-600 text-white text-xs font-bold transition-all shadow-lg shadow-indigo-500/20">
+              <span>زيارة الموقع الحي</span>
+              <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- مشروع 4: Mohamed Waheb Digital Platform -->
+        <div class="project-item rounded-2xl overflow-hidden glass-card flex flex-col justify-between" data-category="webapp corporate">
+          <div>
+            <div class="relative overflow-hidden group h-64 bg-slate-800">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="منصة محمد وهيب الرقمية" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
+              <span class="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold bg-purple-500 text-white shadow-md">منصة ويب وهوية رقمية</span>
+              <span class="absolute bottom-3 left-4 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-900/80 text-[11px] font-semibold text-emerald-400 border border-emerald-500/30">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>منشور حياً على Vercel</span>
+              </span>
+            </div>
+            
+            <div class="p-6 space-y-3">
+              <h3 class="text-xl font-bold font-heading text-white">منصة الهوية الرقمية "محمد وهيب"</h3>
+              <p class="text-sm text-slate-400 leading-relaxed">
+                البوابة الرسمية لمعرض أعمال وحلول الويب للمطور محمد وهيب، مبنية بأحدث معايير الواجهات السريعة مع دعم الوضعين الداكن والفاتح وتصفية المشاريع.
+              </p>
+              
+              <div class="flex flex-wrap gap-1.5 pt-2">
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-purple-400 border border-slate-700">Full RTL</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-sky-400 border border-slate-700">Tailwind CSS</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-emerald-400 border border-slate-700">Dark/Light Mode</span>
+                <span class="px-2.5 py-1 rounded-md text-[11px] font-medium bg-slate-800 text-yellow-400 border border-slate-700">Glassmorphism</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 pt-0 flex items-center justify-between gap-3 border-t border-slate-800/80 mt-4">
+            <button type="button" data-project-id="project-4" class="view-details-btn inline-flex items-center gap-1.5 text-xs font-bold text-slate-300 hover:text-sky-400 transition-colors">
+              <i class="fas fa-info-circle"></i>
+              <span>تفاصيل المشروع</span>
+            </button>
+            <a href="https://mohamed-waheb.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-purple-500 hover:bg-purple-600 text-white text-xs font-bold transition-all shadow-lg shadow-purple-500/20">
+              <span>زيارة الموقع الحي</span>
+              <i class="fas fa-external-link-alt text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       6. قسم المهارات والتقنيات (Skills & Tech Stack)
+       ========================================================================== -->
+  <section id="skills" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold">
+          <i class="fas fa-code-branch"></i>
+          <span>الترسانة البرمجية والمهارات</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          أحدث التقنيات والأدوات التي أتقنها
+        </h2>
+        <p class="text-slate-400 text-base">
+          أعتمد على معايير الويب الحديثة لبناء واجهات أمامية سريعة، مستقرة، وقابلة للتطوير بكل سهولة.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- العمود 1: تقنيات الواجهات الأمامية -->
+        <div class="glass-card rounded-2xl p-7 space-y-6">
+          <div class="flex items-center gap-3 pb-4 border-b border-slate-800">
+            <div class="w-10 h-10 rounded-lg bg-sky-500/15 text-sky-400 flex items-center justify-center text-lg">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-white">تطوير الواجهات (Frontend)</h3>
+          </div>
+
+          <div class="space-y-4">
+            <!-- مهارة 1 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fab fa-html5 text-orange-500"></i> HTML5 (دلالي & SEO)</span>
+                <span class="text-sky-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-500 to-blue-500 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 2 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fab fa-css3-alt text-sky-400"></i> CSS3 & Tailwind CSS</span>
+                <span class="text-sky-400">96%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-500 to-emerald-400 rounded-full" style="width: 96%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 3 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fab fa-js text-yellow-400"></i> JavaScript (ES6+ & DOM)</span>
+                <span class="text-sky-400">90%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-yellow-500 to-amber-400 rounded-full" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 4 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fab fa-react text-sky-300"></i> React.js الأساسيات والمكونات</span>
+                <span class="text-sky-400">82%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-400 to-indigo-500 rounded-full" style="width: 82%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود 2: أنظمة إدارة المحتوى والمتاجر -->
+        <div class="glass-card rounded-2xl p-7 space-y-6">
+          <div class="flex items-center gap-3 pb-4 border-b border-slate-800">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-lg">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-white">إدارة المحتوى والمتاجر (CMS)</h3>
+          </div>
+
+          <div class="space-y-4">
+            <!-- مهارة 1 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fab fa-wordpress text-sky-500"></i> WordPress & WooCommerce</span>
+                <span class="text-emerald-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-emerald-500 to-teal-400 rounded-full" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 2 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fas fa-cubes text-pink-400"></i> Elementor Pro وتطوير القوالب</span>
+                <span class="text-emerald-400">95%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-pink-500 to-rose-400 rounded-full" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 3 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fas fa-tachometer-alt text-amber-400"></i> تحسين سرعة الصفحات وCore Web Vitals</span>
+                <span class="text-emerald-400">88%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-amber-500 to-yellow-400 rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 4 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fas fa-shield-alt text-emerald-400"></i> حماية ونقل وتهيئة الاستضافات</span>
+                <span class="text-emerald-400">85%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-emerald-500 to-green-500 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- العمود 3: التصميم وتجربة المستخدم وأدوات العمل -->
+        <div class="glass-card rounded-2xl p-7 space-y-6">
+          <div class="flex items-center gap-3 pb-4 border-b border-slate-800">
+            <div class="w-10 h-10 rounded-lg bg-purple-500/15 text-purple-400 flex items-center justify-center text-lg">
+              <i class="fas fa-pencil-ruler"></i>
+            </div>
+            <h3 class="text-lg font-bold font-heading text-white">التصميم وأدوات المطورين</h3>
+          </div>
+
+          <div class="space-y-4">
+            <!-- مهارة 1 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fab fa-figma text-purple-400"></i> Figma وتحويل التصميم لكود</span>
+                <span class="text-purple-400">92%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full" style="width: 92%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 2 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fab fa-git-alt text-orange-500"></i> Git & GitHub لإدارة المشاريع</span>
+                <span class="text-purple-400">88%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-orange-500 to-amber-500 rounded-full" style="width: 88%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 3 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fas fa-align-right text-sky-400"></i> دعم اللغة العربية والاتجاه (RTL)</span>
+                <span class="text-purple-400">100%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-sky-400 to-emerald-400 rounded-full" style="width: 100%"></div>
+              </div>
+            </div>
+
+            <!-- مهارة 4 -->
+            <div>
+              <div class="flex justify-between text-xs font-semibold mb-1">
+                <span class="text-slate-300 flex items-center gap-2"><i class="fas fa-universal-access text-blue-400"></i> التوافق وإمكانية الوصول (A11y)</span>
+                <span class="text-purple-400">85%</span>
+              </div>
+              <div class="w-full h-2 rounded-full bg-slate-800 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-blue-500 to-sky-400 rounded-full" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- شعارات التقنيات والأدوات الشائعة (Badges Bar) -->
+      <div class="mt-14 p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-wrap items-center justify-around gap-6 text-slate-400">
+        <span class="flex items-center gap-2 text-sm font-semibold hover:text-white transition-colors"><i class="fab fa-html5 text-orange-500 text-xl"></i> HTML5</span>
+        <span class="flex items-center gap-2 text-sm font-semibold hover:text-white transition-colors"><i class="fab fa-css3-alt text-sky-400 text-xl"></i> CSS3 Modern</span>
+        <span class="flex items-center gap-2 text-sm font-semibold hover:text-white transition-colors"><i class="fab fa-js text-yellow-400 text-xl"></i> JavaScript ES6+</span>
+        <span class="flex items-center gap-2 text-sm font-semibold hover:text-white transition-colors"><i class="fab fa-react text-sky-400 text-xl"></i> React</span>
+        <span class="flex items-center gap-2 text-sm font-semibold hover:text-white transition-colors"><i class="fab fa-wordpress text-blue-400 text-xl"></i> WordPress</span>
+        <span class="flex items-center gap-2 text-sm font-semibold hover:text-white transition-colors"><i class="fab fa-git-alt text-rose-500 text-xl"></i> Git Versioning</span>
+        <span class="flex items-center gap-2 text-sm font-semibold hover:text-white transition-colors"><i class="fab fa-figma text-purple-400 text-xl"></i> Figma UI</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       7. خطوات العمل وآراء العملاء (Process & Testimonials Section)
+       ========================================================================== -->
+  <section id="testimonials" class="py-24 bg-slate-900/50 border-t border-b border-slate-800/60 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- خطوات العمل الأربعة (Work Process) -->
+      <div class="mb-20">
+        <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold">
+            <i class="fas fa-stream"></i>
+            <span>منهجية العمل الواضحة</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+            كيف أحوّل فكرتك إلى موقع ناجح في 4 خطوات؟
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <div class="glass-card rounded-2xl p-6 relative group">
+            <span class="text-4xl font-extrabold font-heading text-sky-500/20 absolute top-4 left-4 group-hover:text-sky-500/40 transition-colors">01</span>
+            <div class="w-12 h-12 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h4 class="text-lg font-bold font-heading text-white mb-2">1. الاستكشاف والتخطيط</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">جلسة استماع لفهم أهداف مشروعك، تحديد الجمهور المستهدف، ورسم هيكل الموقع وخريطة الصفحات بدقة.</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 relative group">
+            <span class="text-4xl font-extrabold font-heading text-sky-500/20 absolute top-4 left-4 group-hover:text-sky-500/40 transition-colors">02</span>
+            <div class="w-12 h-12 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h4 class="text-lg font-bold font-heading text-white mb-2">2. التصميم وتجربة المستخدم</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">تصميم النماذج الأولية وواجهات المستخدم على Figma مع مراعاة الهوية البصرية وتناسق الألوان لراحة الزائر.</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 relative group">
+            <span class="text-4xl font-extrabold font-heading text-sky-500/20 absolute top-4 left-4 group-hover:text-sky-500/40 transition-colors">03</span>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-code"></i>
+            </div>
+            <h4 class="text-lg font-bold font-heading text-white mb-2">3. التطوير وكتابة الكود</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">بناء الموقع باستخدام أحدث تقنيات الويب، مع ضمان التجاوب التام، السرعة الخارقة، ودعم الـ RTL بنسبة 100%.</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6 relative group">
+            <span class="text-4xl font-extrabold font-heading text-sky-500/20 absolute top-4 left-4 group-hover:text-sky-500/40 transition-colors">04</span>
+            <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center text-xl mb-4">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h4 class="text-lg font-bold font-heading text-white mb-2">4. الاختبار والإطلاق</h4>
+            <p class="text-xs text-slate-400 leading-relaxed">فحص الموقع على كافة الأجهزة والمتصفحات، تهيئته لمحركات البحث، ورفعه على الخادم مع تدريبك على إدارته.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- آراء وتقييمات العملاء (Social Proof) -->
+      <div>
+        <div class="text-center max-w-3xl mx-auto mb-12 space-y-3">
+          <h3 class="text-2xl sm:text-3xl font-extrabold font-heading text-white">ماذا يقول العملاء عن العمل معي؟</h3>
+          <p class="text-slate-400 text-sm">تجارب حقيقية لشركاء النجاح الذين سعدت بالتعاون معهم.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- رأي 1 -->
+          <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "تعاملت مع المهندس محمد وهيب في تطوير متجرنا الإلكتروني. النتيجة فاقت توقعاتنا بكثير! سرعة المتجر خيالية وسهولة الشراء ساعدتنا في زيادة مبيعاتنا بشكل ملحوظ في أول شهر بعد الإطلاق."
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800 flex items-center gap-3 mt-4">
+              <div class="w-10 h-10 rounded-full bg-sky-500/20 text-sky-400 font-bold flex items-center justify-center text-sm">
+                س.م
+              </div>
+              <div>
+                <h5 class="text-sm font-bold text-white font-heading">سلطان المنصور</h5>
+                <p class="text-xs text-slate-400">المدير التنفيذي، براند أصيل</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- رأي 2 -->
+          <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "الالتزام الصارم بالمواعيد والدقة في أصغر التفاصيل هو أكثر ما ميز تجربة العمل مع محمد وهيب. قام ببرمجة موقع العيادات ونظام الحجوزات بدقة متناهية ودعم مستمر حتى بعد التسليم."
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800 flex items-center gap-3 mt-4">
+              <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm">
+                د.ف
+              </div>
+              <div>
+                <h5 class="text-sm font-bold text-white font-heading">د. فاطمة الزهراني</h5>
+                <p class="text-xs text-slate-400">مديرة مجمع ابتسامة النيل الطبي</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- رأي 3 -->
+          <div class="glass-card rounded-2xl p-7 flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="flex text-amber-400 text-sm gap-1">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="text-slate-300 text-sm leading-relaxed">
+                "حاسبة التكلفة التي برمجها لنا الأستاذ محمد ساهمت في فلترة العملاء وتوفير عشرات الساعات على فريق المبيعات. كود منظم واحترافي وشخص خلوق ومرن في التعامل."
+              </p>
+            </div>
+            <div class="pt-6 border-t border-slate-800 flex items-center gap-3 mt-4">
+              <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-sm">
+                م.ك
+              </div>
+              <div>
+                <h5 class="text-sm font-bold text-white font-heading">م. كريم الشناوي</h5>
+                <p class="text-xs text-slate-400">مؤسس وكالة أفق الإبداعية</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       8. قسم التواصل ونموذج المراسلة (Contact Section)
+       ========================================================================== -->
+  <section id="contact" class="py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- عنوان القسم -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-sky-500/10 text-sky-400 border border-sky-500/20 text-xs font-semibold">
+          <i class="fas fa-envelope-open-text"></i>
+          <span>ابدأ مشروعك اليوم</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-white">
+          هل لديك فكرة مشروع؟ دعنا نحولها إلى واقع ملموس!
+        </h2>
+        <p class="text-slate-400 text-base">
+          تواصل معي الآن لمناقشة متطلباتك وسأكون سعيداً بتقديم استشارة مجانية وعرض سعر مخصص لمشروعك.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- الجانب الأيمن: معلومات وقنوات التواصل المباشرة -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="glass-card rounded-2xl p-8 space-y-6">
+            <h3 class="text-xl font-bold font-heading text-white">قنوات التواصل المباشرة</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              يمكنك التواصل معي مباشرة عبر أي من القنوات التالية، وأرد غالباً في أقل من ساعتين خلال أوقات العمل.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <!-- واتساب -->
+              <a href="https://wa.me/201000000000?text=مرحباً%20محمد،%20أرغب%20في%20الاستفسار%20عن%20تطوير%20مشروع%20موقع%20جديد" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/70 hover:bg-emerald-500/10 border border-slate-700/80 hover:border-emerald-500/30 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block">محادثة واتساب فورية مع محمد</span>
+                  <span class="text-sm font-bold text-white dir-ltr font-mono">+20 100 000 0000</span>
+                </div>
+              </a>
+
+              <!-- البريد الإلكتروني -->
+              <a href="mailto:contact@mohamedwaheb.dev" class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/70 hover:bg-sky-500/10 border border-slate-700/80 hover:border-sky-500/30 transition-all group">
+                <div class="w-12 h-12 rounded-xl bg-sky-500/15 text-sky-400 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block">البريد الإلكتروني المهني</span>
+                  <span class="text-sm font-bold text-white font-mono">contact@mohamedwaheb.dev</span>
+                </div>
+              </a>
+
+              <!-- الموقع الجغرافي -->
+              <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-800/70 border border-slate-700/80">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center text-xl">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-400 block">المقر وتوفر العمل</span>
+                  <span class="text-sm font-bold text-white">القاهرة، مصر (ومتاح للعمل عن بُعد عالمياً)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- روابط الحسابات الاجتماعية المهنية -->
+            <div class="pt-6 border-t border-slate-800">
+              <span class="text-xs text-slate-400 block mb-3 font-semibold">تابعني على المنصات المهنية:</span>
+              <div class="flex items-center gap-3">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400 transition-all">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-white hover:border-white transition-all">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-400 transition-all">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- الجانب الأيسر: نموذج التواصل التفاعلي -->
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-2xl p-8 sm:p-10">
+            <h3 class="text-xl font-bold font-heading text-white mb-6">أرسل لي رسالة مباشرة</h3>
+
+            <form id="contactForm" class="space-y-5" novalidate>
+              
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- اسم العميل -->
+                <div>
+                  <label for="senderName" class="block text-xs font-semibold text-slate-300 mb-2">اسمك الكريم <span class="text-rose-400">*</span></label>
+                  <input type="text" id="senderName" placeholder="مثال: أحمد عبد الرحمن" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm transition-all">
+                </div>
+
+                <!-- البريد الإلكتروني -->
+                <div>
+                  <label for="senderEmail" class="block text-xs font-semibold text-slate-300 mb-2">بريدك الإلكتروني <span class="text-rose-400">*</span></label>
+                  <input type="email" id="senderEmail" placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm transition-all dir-ltr text-right">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <!-- نوع المشروع المطلوب -->
+                <div>
+                  <label for="projectType" class="block text-xs font-semibold text-slate-300 mb-2">نوع المشروع</label>
+                  <select id="projectType" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm transition-all">
+                    <option value="ecommerce">متجر إلكتروني متكامل</option>
+                    <option value="corporate">موقع شركة أو مؤسسة</option>
+                    <option value="webapp">تطبيق ويب أو أداة تفاعلية</option>
+                    <option value="landing">صفحة هبوط تسويقية (Landing Page)</option>
+                    <option value="maintenance">تسريع وصيانة موقع قائم</option>
+                    <option value="other">أخرى / استشارة برمجية</option>
+                  </select>
+                </div>
+
+                <!-- الميزانية التقديرية (اختياري) -->
+                <div>
+                  <label for="budgetRange" class="block text-xs font-semibold text-slate-300 mb-2">الميزانية التقديرية (اختياري)</label>
+                  <select id="budgetRange" class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm transition-all">
+                    <option value="">اختر النطاق المتوقع...</option>
+                    <option value="1">أقل من $1,000</option>
+                    <option value="2">$1,000 - $3,000</option>
+                    <option value="3">$3,000 - $5,000</option>
+                    <option value="4">أكثر من $5,000</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- تفاصيل المشروع -->
+              <div>
+                <label for="senderMessage" class="block text-xs font-semibold text-slate-300 mb-2">تفاصيل مشروعك أو استفسارك <span class="text-rose-400">*</span></label>
+                <textarea id="senderMessage" rows="5" placeholder="أخبرني عن فكرة مشروعك، عدد الصفحات، المزايا المطلوبة، أو أي موعد محدد للتسليم..." class="w-full px-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm transition-all leading-relaxed"></textarea>
+              </div>
+
+              <!-- زر الإرسال -->
+              <button type="submit" id="submitBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-sky-500 via-sky-600 to-blue-600 text-white font-bold text-sm shadow-xl shadow-sky-500/25 hover:shadow-sky-500/40 hover:-translate-y-0.5 transition-all">
+                <i class="fas fa-paper-plane"></i>
+                <span>إرسال الرسالة إلى محمد</span>
+              </button>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       9. قاع الصفحة (Footer)
+       ========================================================================== -->
+  <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-sm py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/80">
+        <!-- شعار الفوتر -->
+        <a href="#hero" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-sky-500 flex items-center justify-center text-white font-bold text-sm shadow-md">
+            <span class="font-mono">&lt;/&gt;</span>
+          </div>
+          <span class="font-heading font-extrabold text-lg text-white">محمد وهيب</span>
+        </a>
+
+        <!-- روابط سريعة في الفوتر -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm">
+          <a href="#hero" class="hover:text-sky-400 transition-colors">الرئيسية</a>
+          <a href="#about" class="hover:text-sky-400 transition-colors">من أنا</a>
+          <a href="#services" class="hover:text-sky-400 transition-colors">خدماتي</a>
+          <a href="#portfolio" class="hover:text-sky-400 transition-colors">معرض الأعمال</a>
+          <a href="#skills" class="hover:text-sky-400 transition-colors">مهاراتي</a>
+          <a href="#contact" class="hover:text-sky-400 transition-colors">تواصل معي</a>
+        </div>
+
+        <!-- وسائل التواصل الاجتماعي -->
+        <div class="flex items-center gap-3">
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-sky-400 hover:border-sky-400 transition-all">
+            <i class="fab fa-linkedin-in text-xs"></i>
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-white hover:border-white transition-all">
+            <i class="fab fa-github text-xs"></i>
+          </a>
+          <a href="https://wa.me/201000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-emerald-400 hover:border-emerald-400 transition-all">
+            <i class="fab fa-whatsapp text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- سطر حقوق النشر -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 جميع الحقوق محفوظة لـ محمد وهيب. صُمم وبُرمج بكل إتقان وشغف.</p>
+        <p class="flex items-center gap-1">
+          <span>مبني باستخدام HTML5, Tailwind CSS, & Vanilla JS</span>
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==========================================================================
+       10. نافذة تفاصيل المشروع المنبثقة (Project Details Modal)
+       ========================================================================== -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-slate-900 border border-slate-700 rounded-2xl shadow-2xl overflow-hidden my-8">
+      
+      <!-- زر إغلاق المودال -->
+      <button type="button" id="closeModalBtn" aria-label="إغلاق النافذة" class="absolute top-4 left-4 z-20 w-9 h-9 rounded-full bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700 flex items-center justify-center transition-all">
+        <i class="fas fa-times text-sm"></i>
+      </button>
+
+      <!-- صورة المشروع الرئيسية داخل المودال -->
+      <div class="relative h-64 sm:h-72 w-full bg-slate-950 overflow-hidden">
+        <img id="modalImage" src="" alt="" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+        <span id="modalCategory" class="absolute bottom-4 right-6 px-3.5 py-1 rounded-full text-xs font-bold bg-sky-500 text-white shadow-md"></span>
+      </div>
+
+      <!-- محتوى تفاصيل المشروع -->
+      <div class="p-6 sm:p-8 space-y-5">
+        <h3 id="modalTitle" class="text-2xl font-bold font-heading text-white"></h3>
+        
+        <p id="modalDescription" class="text-slate-300 text-sm sm:text-base leading-relaxed"></p>
+
+        <!-- وسوم التقنيات -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">التقنيات المستخدمة:</h4>
+          <div id="modalTags" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- أبرز مزايا المشروع وإنجازاته -->
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">أبرز المزايا والنتائج المحققة:</h4>
+          <ul id="modalFeatures" class="space-y-2"></ul>
+        </div>
+
+        <!-- أزرار العمل داخل المودال -->
+        <div class="pt-4 border-t border-slate-800 flex items-center gap-4">
+          <a id="modalLiveLink" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-sm shadow-md transition-all">
+            <span>زيارة الموقع الحي</span>
+            <i class="fas fa-external-link-alt text-xs"></i>
+          </a>
+          <a id="modalCodeLink" href="#" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-semibold transition-all">
+            <i class="fab fa-github"></i>
+            <span>مستودع الكود</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==========================================================================
+       11. زر العودة للأعلى (Back to Top Button)
+       ========================================================================== -->
+  <button id="backToTopBtn" type="button" aria-label="العودة لأعلى الصفحة" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-xl bg-sky-500 text-white shadow-xl shadow-sky-500/30 flex items-center justify-center opacity-0 invisible hover:-translate-y-1 hover:bg-sky-400 transition-all duration-300">
+    <i class="fas fa-arrow-up text-sm"></i>
+  </button>
+
+
+  <!-- ملف الجافاسكريبت التفاعلي -->
+  <script>
+/**
+ * ==========================================================================
+ * المنطق البرمجي التفاعلي لموقع معرض الأعمال (Portfolio Interaction Script)
+ * المطور ومصمم الواجهات: محمد وهيب (Mohamed Waheb)
+ * تضمين المشاريع الحقيقية المنشورة على Vercel
+ * ==========================================================================
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 1. تهيئة النمط (Dark / Light Mode)
+  initThemeToggle();
+
+  // 2. قائمة الهواتف الذكية (Mobile Navigation Menu)
+  initMobileMenu();
+
+  // 3. شريط التنقل الذكي وتحديد الأقسام النشطة (Sticky Nav & ScrollSpy)
+  initScrollSpy();
+
+  // 4. تصفية وتصنيف المشاريع (Portfolio Filtering)
+  initPortfolioFilter();
+
+  // 5. نافذة تفاصيل المشروع المنبثقة (Project Details Modal)
+  initProjectModal();
+
+  // 6. التحقق من نموذج التواصل وإرساله (Contact Form Validation)
+  initContactForm();
+
+  // 7. عداد الإحصائيات التفاعلي (Animated Counters)
+  initAnimatedCounters();
+
+  // 8. زر العودة للأعلى (Back to Top Button)
+  initBackToTop();
+});
+
+/* ==========================================================================
+   بيانات المشاريع الحقيقية المنشورة (Projects Data Store - Vercel Live Links)
+   ========================================================================== */
+const projectsData = {
+  'project-1': {
+    title: 'شركة "Tito\'s Decoration" للديكور والتشطيبات الفاخرة',
+    category: 'موقع شركات ومؤسسات راقية',
+    tag: 'corporate',
+    shortDesc: 'موقع تعريفي بريطاني فاخر لشركة تشطيبات وديكور داخلي بلندن، يركز على الهوية البصرية السينمائية وحساب عروض الأسعار.',
+    fullDesc: 'موقع وهوية رقمية راقية صممها وبرمجها محمد وهيب لشركة التشطيبات والديكور الداخلي البريطانية Tito\'s Decoration. يعتمد الموقع على خطوط كلاسيكية فخمة (Cinzel & Poppins)، وتنسيق شبكي متجاوب لمعارض الصور والمشاريع المنفذة عبر مختلف مدن المملكة المتحدة، مع نموذج تواصل واستشارات هندسية سريع.',
+    image: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
+    tags: ['HTML5', 'Tailwind CSS', 'JavaScript (ES6+)', 'Cinzel & Poppins Typography', 'Fit-Out & Luxury UI'],
+    features: [
+      'تصميم فاخر بألوان كلاسيكية (Gold & Navy) يعكس فخامة التشطيبات البريطانية',
+      'يتضمن آلة حاسبة تكاليف دقيقة مخصصة (Tito\'s Precision Cost Estimator) مع إصدار فواتير رسمي',
+      'معرض أعمال ومشاريع بتصنيفات متجاوبة وسريعة التصفح على الهواتف',
+      'نموذج طلب عروض أسعار تفاعلي للمشاريع السكنية والتجارية',
+      'منشور ومتاح حياً على Vercel مع سرعة استجابة فائقة'
+    ],
+    liveUrl: 'https://titos-bay.vercel.app/',
+    codeUrl: '#'
+  },
+  'project-2': {
+    title: 'مركز "ابتسامة النيل" لطب وجراحة الأسنان',
+    category: 'موقع طبي ونظام حجز مواعيد ذكي',
+    tag: 'corporate',
+    shortDesc: 'بوابة إلكترونية متكاملة لعيادة أسنان تتيح للمرضى حجز المواعيد، مقارنة صور قبل وبعد العلاج، واستلام إيصال رقمي فوري.',
+    fullDesc: 'صفحة هبوط وموقع طبي تفاعلي صممه وبرمجه محمد وهيب لمركز طب أسنان متقدم (Nile Smile Dental Clinic). يشتمل على عارض مقارنة تفاعلي لصور الحالات (Before/After Slider بالسحب)، ونظام فلترة ذكي للخدمات الطبية، ونظام حجز إلكتروني متكامل يصدر إيصال حجز رقمي مؤكد مع خيار المتابعة والتأكيد عبر واتساب وطباعة الكوبون.',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80',
+    tags: ['HTML5 / RTL', 'Tailwind CSS', 'JavaScript (ES6+)', 'Before/After Slider', 'Digital Voucher System'],
+    features: [
+      'نظام حجز مواعيد استشاريين متكامل مع توليد إيصال رقمي مؤكد بكود حجز',
+      'عارض مقارنة تفاعلي بالسحب (Before / After Slider) لنتائج تجميل الأسنان',
+      'تصفية فورية للخدمات الطبية مع تعبئة تلقائية لنموذج الحجز',
+      'شريط سفلي عائم للهواتف الذكية للوصول السريع ومحادثة واتساب فورية'
+    ],
+    liveUrl: 'https://my-ten-ashy.vercel.app/',
+    codeUrl: '#'
+  },
+  'project-3': {
+    title: 'متجر "تيك هاب" (TechHub) للإلكترونيات الذكية',
+    category: 'متجر إلكتروني متكامل',
+    tag: 'ecommerce',
+    shortDesc: 'متجر إلكتروني عصري وفائق السرعة للإلكترونيات والأجهزة الذكية والساعات وسماعات الصوت بنمط Stitch UI المبتكر.',
+    fullDesc: 'متجر إلكتروني متكامل ومتقدم في مجال الإلكترونيات والتقنيات العصرية (TechHub Store) صممه وبرمجه محمد وهيب. يتميز بسلة تسوق تفاعلية سريعة، شريط إعلانات علوي، تصنيف ذكي للمنتجات، وبطاقات منتجات غنية تدعم الشراء بنقرة واحدة، مع مراعاة أعلى معايير التجاوب على الهواتف.',
+    image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=800&q=80',
+    tags: ['E-Commerce UI', 'Tailwind CSS', 'JavaScript (ES6+)', 'Interactive Cart', 'Stitch UI Style'],
+    features: [
+      'سلة تسوق عائمة ومحدثة لحظياً بدون الحاجة لإعادة تحميل الصفحة',
+      'تصفية سريعة للمنتجات (ساعات ذكية، سماعات، أجهزة منزلية، مستلزمات عمل)',
+      'شريط عروض وتخفيضات تفاعلي ونظام وسوم الخصومات الفورية',
+      'مُحسّن لمحركات البحث وسريع التحميل على خوادم Vercel العالمية'
+    ],
+    liveUrl: 'https://techhub-umber.vercel.app/',
+    codeUrl: '#'
+  },
+  'project-4': {
+    title: 'بوابة ومعرض الأعمال الرقمي "محمد وهيب"',
+    category: 'تطبيق ويب وصفحة هبوط تفاعلية',
+    tag: 'webapp',
+    shortDesc: 'المنصة الرسمية لمعرض أعمال وحلول الويب لمحمد وهيب بدعم كامل لـ RTL والوضع الليلي وتصفية المشاريع.',
+    fullDesc: 'بوابة إلكترونية ومعرض أعمال شخصي لمحمد وهيب تم تطويره ليكون نموذجاً حياً لأعلى معايير تصميم الواجهات وتجربة المستخدم. يحتوي على نظام متكامل للتصفية الديناميكية، نوافذ منبثقة تفاعلية للمشاريع، عدادات رقمية متحركة، ونموذج تواصل ذكي مع التحقق الفوري.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+    tags: ['Full RTL Support', 'Tailwind CSS', 'Vanilla JavaScript', 'Dark & Light Mode', 'Vercel Deployed'],
+    features: [
+      'دعم كامل للوضع الليلي والنهاري مع حفظ التفضيل عبر LocalStorage',
+      'تأثيرات زجاجية راقية (Glassmorphism) مع رسوم متحركة خفيفة وناعمة',
+      'نموذج تواصل تفاعلي ذكي يتحقق من صحة المدخلات ويصدر إشعار Toast',
+      'متوافق 100% مع معايير الأداء والسرعة في Google PageSpeed'
+    ],
+    liveUrl: 'https://mohamed-waheb.vercel.app/',
+    codeUrl: '#'
+  }
+};
+
+/* ==========================================================================
+   1. التبديل بين الوضع الليلي والنهاري (Theme Toggle)
+   ========================================================================== */
+function initThemeToggle() {
+  const themeToggleBtn = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+  if (!themeToggleBtn) return;
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.add('light');
+    if (themeIcon) themeIcon.className = 'fas fa-moon text-yellow-400';
+  } else {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+    if (themeIcon) themeIcon.className = 'fas fa-sun text-yellow-400';
+  }
+
+  themeToggleBtn.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    if (isDark) {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      localStorage.setItem('theme', 'light');
+      if (themeIcon) themeIcon.className = 'fas fa-moon text-yellow-400';
+    } else {
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
+      localStorage.setItem('theme', 'dark');
+      if (themeIcon) themeIcon.className = 'fas fa-sun text-yellow-400';
+    }
+  });
+}
+
+/* ==========================================================================
+   2. قائمة الهواتف الذكية (Mobile Navigation Menu)
+   ========================================================================== */
+function initMobileMenu() {
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  const menuIcon = mobileMenuBtn ? mobileMenuBtn.querySelector('i') : null;
+
+  if (!mobileMenuBtn || !mobileMenu) return;
+
+  const toggleMenu = () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    if (isOpen) {
+      mobileMenu.classList.add('hidden');
+      if (menuIcon) menuIcon.className = 'fas fa-bars text-xl';
+    } else {
+      mobileMenu.classList.remove('hidden');
+      if (menuIcon) menuIcon.className = 'fas fa-times text-xl';
+    }
+  };
+
+  mobileMenuBtn.addEventListener('click', toggleMenu);
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      if (menuIcon) menuIcon.className = 'fas fa-bars text-xl';
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
+      if (menuIcon) menuIcon.className = 'fas fa-bars text-xl';
+    }
+  });
+}
+
+/* ==========================================================================
+   3. شريط التنقل وتحديد الأقسام النشطة (Sticky Navbar & ScrollSpy)
+   ========================================================================== */
+function initScrollSpy() {
+  const navbar = document.getElementById('mainNav');
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.pageYOffset;
+    if (navbar) {
+      if (scrollY > 50) {
+        navbar.classList.add('shadow-lg', 'bg-slate-900/95', 'border-slate-800');
+      } else {
+        navbar.classList.remove('shadow-lg');
+      }
+    }
+
+    sections.forEach(current => {
+      const sectionHeight = current.offsetHeight;
+      const sectionTop = current.offsetTop - 120;
+      const sectionId = current.getAttribute('id');
+
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active', 'text-sky-400');
+          if (link.getAttribute('href') === `#${sectionId}`) {
+            link.classList.add('active', 'text-sky-400');
+          }
+        });
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   4. تصفية وتصنيف المشاريع (Portfolio Filter)
+   ========================================================================== */
+function initPortfolioFilter() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectItems = document.querySelectorAll('.project-item');
+
+  if (!filterBtns.length || !projectItems.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'bg-sky-500', 'text-white', 'shadow-md', 'shadow-sky-500/25');
+        b.classList.add('bg-slate-800/80', 'text-slate-300', 'hover:bg-slate-700');
+      });
+
+      btn.classList.add('active', 'bg-sky-500', 'text-white', 'shadow-md', 'shadow-sky-500/25');
+      btn.classList.remove('bg-slate-800/80', 'text-slate-300', 'hover:bg-slate-700');
+
+      const filterValue = btn.getAttribute('data-filter');
+
+      projectItems.forEach(item => {
+        const itemCategories = item.getAttribute('data-category').split(' ');
+        item.classList.remove('fade-in');
+
+        if (filterValue === 'all' || itemCategories.includes(filterValue)) {
+          item.classList.remove('hide');
+          setTimeout(() => {
+            item.classList.add('fade-in');
+          }, 10);
+        } else {
+          item.classList.add('hide');
+        }
+      });
+    });
+  });
+}
+
+/* ==========================================================================
+   5. نافذة تفاصيل المشروع المنبثقة (Project Details Modal)
+   ========================================================================== */
+function initProjectModal() {
+  const modal = document.getElementById('projectModal');
+  const modalCloseBtn = document.getElementById('closeModalBtn');
+  const detailButtons = document.querySelectorAll('.view-details-btn');
+
+  if (!modal) return;
+
+  const modalTitle = document.getElementById('modalTitle');
+  const modalCategory = document.getElementById('modalCategory');
+  const modalImage = document.getElementById('modalImage');
+  const modalDescription = document.getElementById('modalDescription');
+  const modalTags = document.getElementById('modalTags');
+  const modalFeatures = document.getElementById('modalFeatures');
+  const modalLiveLink = document.getElementById('modalLiveLink');
+  const modalCodeLink = document.getElementById('modalCodeLink');
+
+  detailButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const projectId = btn.getAttribute('data-project-id');
+      const data = projectsData[projectId];
+      if (!data) return;
+
+      if (modalTitle) modalTitle.textContent = data.title;
+      if (modalCategory) modalCategory.textContent = data.category;
+      if (modalImage) {
+        modalImage.src = data.image;
+        modalImage.alt = data.title;
+      }
+      if (modalDescription) modalDescription.textContent = data.fullDesc;
+
+      if (modalTags) {
+        modalTags.innerHTML = data.tags
+          .map(tag => `<span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-400 border border-sky-500/20">${tag}</span>`)
+          .join('');
+      }
+
+      if (modalFeatures) {
+        modalFeatures.innerHTML = data.features
+          .map(feature => `<li class="flex items-start gap-2 text-slate-300 text-sm"><i class="fas fa-check-circle text-emerald-400 mt-1"></i> <span>${feature}</span></li>`)
+          .join('');
+      }
+
+      if (modalLiveLink) {
+        modalLiveLink.href = data.liveUrl;
+        modalLiveLink.target = '_blank';
+      }
+      if (modalCodeLink) modalCodeLink.href = data.codeUrl;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  const closeModal = () => {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+  };
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+}
+
+/* ==========================================================================
+   6. التحقق من نموذج التواصل وإرساله (Contact Form Validation)
+   ========================================================================== */
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const nameInput = document.getElementById('senderName');
+    const emailInput = document.getElementById('senderEmail');
+    const messageInput = document.getElementById('senderMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    let isValid = true;
+
+    if (!nameInput.value.trim() || nameInput.value.trim().length < 3) {
+      showInputError(nameInput, 'يرجى إدخال اسمك الكريم (3 أحرف على الأقل)');
+      isValid = false;
+    } else {
+      clearInputError(nameInput);
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+      showInputError(emailInput, 'يرجى إدخال بريد إلكتروني صحيح وموثوق');
+      isValid = false;
+    } else {
+      clearInputError(emailInput);
+    }
+
+    if (!messageInput.value.trim() || messageInput.value.trim().length < 10) {
+      showInputError(messageInput, 'يرجى كتابة تفاصيل مشروعك أو استفسارك (10 أحرف على الأقل)');
+      isValid = false;
+    } else {
+      clearInputError(messageInput);
+    }
+
+    if (!isValid) return;
+
+    const originalBtnContent = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+      </svg>
+      جاري إرسال رسالتك...
+    `;
+
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnContent;
+      form.reset();
+      showToast('شكراً لتواصلك! تم استلام رسالتك بنجاح وسيتواصل معك محمد وهيب خلال 24 ساعة.');
+    }, 1200);
+  });
+
+  function showInputError(input, message) {
+    input.classList.add('border-rose-500', 'focus:ring-rose-500');
+    let errorMsg = input.parentElement.querySelector('.error-msg');
+    if (!errorMsg) {
+      errorMsg = document.createElement('span');
+      errorMsg.className = 'error-msg text-xs text-rose-400 mt-1 block';
+      input.parentElement.appendChild(errorMsg);
+    }
+    errorMsg.textContent = message;
+  }
+
+  function clearInputError(input) {
+    input.classList.remove('border-rose-500', 'focus:ring-rose-500');
+    const errorMsg = input.parentElement.querySelector('.error-msg');
+    if (errorMsg) errorMsg.remove();
+  }
+}
+
+/* ==========================================================================
+   إشعار منبثق عند إتمام الإجراء (Toast Notification)
+   ========================================================================== */
+function showToast(message) {
+  let toast = document.getElementById('toastNotification');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'toastNotification';
+    toast.className = 'fixed bottom-6 left-6 z-50 flex items-center gap-3 bg-emerald-600 text-white px-5 py-4 rounded-xl shadow-2xl transition-all duration-300';
+    document.body.appendChild(toast);
+  }
+
+  toast.innerHTML = `
+    <i class="fas fa-check-circle text-2xl"></i>
+    <div>
+      <p class="font-bold text-sm font-heading">تمت العملية بنجاح</p>
+      <p class="text-xs text-emerald-100">${message}</p>
+    </div>
+  `;
+
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 4500);
+}
+
+/* ==========================================================================
+   7. عداد الإحصائيات التفاعلي (Animated Counters)
+   ========================================================================== */
+function initAnimatedCounters() {
+  const counters = document.querySelectorAll('.counter-value');
+  let hasAnimated = false;
+
+  const handleScroll = () => {
+    if (hasAnimated || !counters.length) return;
+
+    const firstCounter = counters[0];
+    const rect = firstCounter.getBoundingClientRect();
+
+    if (rect.top <= window.innerHeight - 50) {
+      hasAnimated = true;
+
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 1800;
+        const step = target / (duration / 25);
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            counter.textContent = target + (counter.getAttribute('data-suffix') || '');
+            clearInterval(timer);
+          } else {
+            counter.textContent = Math.floor(current) + (counter.getAttribute('data-suffix') || '');
+          }
+        }, 25);
+      });
+
+      window.removeEventListener('scroll', handleScroll);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll();
+}
+
+/* ==========================================================================
+   8. زر العودة للأعلى (Back to Top Button)
+   ========================================================================== */
+function initBackToTop() {
+  const backToTopBtn = document.getElementById('backToTopBtn');
+  if (!backToTopBtn) return;
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 400) {
+      backToTopBtn.classList.remove('opacity-0', 'invisible');
+      backToTopBtn.classList.add('opacity-100', 'visible');
+    } else {
+      backToTopBtn.classList.add('opacity-0', 'invisible');
+      backToTopBtn.classList.remove('opacity-100', 'visible');
+    }
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}
+
+</script>
+
+</body>
+</html>
